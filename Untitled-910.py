@@ -1,8 +1,8 @@
 ## Categorías y subcategorías de libros
 categorias = {
-    "Ingeniería": ["Sistemas", "Electrónica", "Industrial"],
+    "Ingeniería": ["Sistemas", "civil", "Industrial"],
     "Salud": ["Enfermería", "Medicina", "Nutrición"],
-    "Derecho": ["Penal", "Civil", "Constitucional"],
+    "Derecho": ["Penal", "tributario", "Constitucional"],
     "Literatura": ["Clásica", "Moderna", "Infantil"]
 }
 
@@ -31,9 +31,9 @@ for categoria, subcategorias in categorias.items():
                     prestamos[categoria][sub][dia] = cantidad
                     break
                 except ValueError:
-                    print("    Ingrese un número válido.")
+                    print("    Ingrese un número que sea válido.")
 
-# Mostrar resultados
+# resultados
 total_general = 0
 print("\n--- Reporte de préstamos ---")
 for categoria, subcategorias in prestamos.items():
@@ -46,4 +46,4 @@ for categoria, subcategorias in prestamos.items():
     print(f"  Total en {categoria}: {total_categoria} préstamos")
     total_general += total_categoria
 
-print(f"\nTotal general semanal: {total_general} préstamos")
+print(f"\nTotal  semanal: {total_general} préstamos")
